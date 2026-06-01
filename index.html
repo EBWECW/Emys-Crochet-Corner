@@ -74,7 +74,7 @@
 
         .products {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 20px;
         }
 
@@ -92,6 +92,50 @@
             padding: 20px;
             margin-top: 40px;
         }
+
+        /* Dropdown Menu */
+        .dropdown {
+            display: inline-block;
+            position: relative;
+        }
+
+        .dropbtn {
+            background-color: #c7aefc;
+            color: #4a3b5f;
+            padding: 10px 16px;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #efe3ff;
+            min-width: 160px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: #4a3b5f;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #d9c2ff;
+        }
+
+        /* Simple hover effect for buttons/links */
+        a:hover, .dropbtn:hover {
+            filter: brightness(1.05);
+        }
     </style>
 </head>
 
@@ -105,6 +149,19 @@
 <nav>
     <a href="#about">About</a>
     <a href="#products">Products</a>
+
+    <!-- Plushies Dropdown -->
+    <div class="dropdown">
+        <button class="dropbtn">Plushies</button>
+        <div class="dropdown-content">
+            <a href="#bunnies">Bunnies</a>
+            <a href="#frogs">Frogs</a>
+            <a href="#pigs">Pigs</a>
+            <a href="#chickens">Chickens</a>
+        </div>
+    </div>
+
+    <a href="#blankets">Blankets</a>
     <a href="#contact">Contact</a>
 </nav>
 
@@ -115,14 +172,14 @@
 
 <section id="about" class="section">
     <h3>About Emy</h3>
-    <p>Emy is a young crochet artist with a passion for crafting unique, custom pieces. From plushies to accessories, every stitch is made with care and creativity.</p>
+    <p>Emy is a young crochet artist with a passion for crafting unique, custom pieces. From plushies to accessories and blankets, every stitch is made with care and creativity.</p>
 </section>
 
 <section id="products" class="section">
     <h3>Featured Creations</h3>
     <div class="products">
         <div class="product-card">
-            <h4>Plushies</h4>
+            <h4>Custom Plushies</h4>
             <p>Soft, adorable, and made just for you.</p>
         </div>
         <div class="product-card">
@@ -136,9 +193,65 @@
     </div>
 </section>
 
+<!-- Plushie Categories -->
+
+<section id="bunnies" class="section">
+    <h3>Bunny Plushies</h3>
+    <div class="products">
+
+        <!-- Bunny Plushie -->
+        <div class="product-card">
+            <img src="bunny.jpg" alt="Crochet Bunny Plushie" style="width:100%; border-radius:10px; margin-bottom:10px;">
+            <h4>Bunny Plushie</h4>
+            <p>Hand‑crocheted bunny made with soft yarn. Perfect for gifts or decor.</p>
+            <p><strong>Price: $15</strong></p>
+
+            <!-- PayPal Button (replace hosted_button_id with your real ID) -->
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+              <input type="hidden" name="cmd" value="_s-xclick">
+              <input type="hidden" name="hosted_button_id" value="YOUR_BUTTON_ID_HERE">
+              <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynow_LG.gif" border="0" name="submit" alt="Buy Now">
+            </form>
+        </div>
+
+    </div>
+</section>
+
+<section id="frogs" class="section">
+    <h3>Frog Plushies</h3>
+    <div class="products">
+        <!-- Add frog plushies here later -->
+    </div>
+</section>
+
+<section id="pigs" class="section">
+    <h3>Pig Plushies</h3>
+    <div class="products">
+        <!-- Add pig plushies here later -->
+    </div>
+</section>
+
+<section id="chickens" class="section">
+    <h3>Chicken Plushies</h3>
+    <div class="products">
+        <!-- Add chicken plushies here later -->
+    </div>
+</section>
+
+<!-- Blankets Section -->
+
+<section id="blankets" class="section">
+    <h3>Blankets</h3>
+    <p>Hand‑crocheted blankets made with love and cozy yarn.</p>
+    <div class="products">
+        <!-- Add blanket products here -->
+    </div>
+</section>
+
 <section id="contact" class="section">
     <h3>Contact</h3>
-    <p>Want a custom order? Reach out on Instagram @emyscrochet or email emyscrochet@example.com</p>
+    <p>Want a custom order or have a question?</p>
+    <p>Reach out on Instagram @emyscrochet or email emyscrochet@example.com</p>
 </section>
 
 <footer>
